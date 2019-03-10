@@ -1,0 +1,9 @@
+mko\project\main\domain\SignupForm.class
+mko\project\main\service\UserDetailServiceImpl.class
+mko\project\main\web\StudentController.class
+mko\project\main\CrudbootApplication.class
+mko\project\main\domain\User.class
+mko\project\main\domain\StudentRepository.class
+mko\project\main\domain\UserRepository.class
+mko\project\main\web\UserController.class
+mko\project\main\domain\Student.class

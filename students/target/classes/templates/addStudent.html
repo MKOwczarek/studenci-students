@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add student</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+        
+        <script>
+        function upperCaseF(a)
+        {
+        setTimeout(function(){
+        a.value = a.value.toString().charAt(0).toUpperCase() + a.value.toString().slice(1);
+        }, 1);   
+        }       
+        </script>
+
+
+</head>
+<body>
+<div class="container" style="position: relative; right: -300px; top: 50px">
+	<h1>New student</h1>
+	<div class="col-md-4">
+		<form th:object="${student}" th:action="@{save}" action="#" method="post">
+			<input type="text" th:field="*{firstName}" class="form-control" onkeydown="upperCaseF(this)"
+				placeholder="Firstname" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="text" th:field="*{lastName}" class="form-control" onkeydown="upperCaseF(this)"
+				placeholder="Lastname" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+                                <select name="cars" size="3" th:field="*{department}" style="width:350px;  ">
+                                <option value="IT">IT</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Management">Management</option>
+                                </select>
+			<div style="clear: both; display: block; height: 10px;"></div>	
+			<input type="email" th:field="*{email}" class="form-control"
+				placeholder="Email" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" class="btn btn-primary" value="Save"></input>
+		</form>
+	</div>
+</div>
+</body>
+</html>
