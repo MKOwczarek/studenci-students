@@ -14,7 +14,7 @@ import mko.project.main.service.UserDetailServiceImpl;
 
 @Configuration
 @EnableWebSecurity
-@ComponentScan("fi.haagahelia.course")
+@ComponentScan("mko.project.main")
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter 
 {
     @Autowired
